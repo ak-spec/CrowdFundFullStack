@@ -40,7 +40,8 @@ const getData = async (id) => {
 const Campaign = ({campaign}) => {
   const [raisedAmt, setRaisedAmt] = useState(campaign.currAmt);
   const [status, setStatus] = useState("Ongoing");
- 
+  const parsed_date = new Date(campaign.deadline);
+    
   useEffect(() => {
     const checkTime =  () => {
       if(window.localStorage.getItem(campaign.id)){
@@ -77,7 +78,7 @@ const Campaign = ({campaign}) => {
           <p style={{fontFamily: 'sans-serif', marginTop: '60px'}}>Campaign launched by: {campaign.owner}</p>  
         </div>
         <div className='status-section'>
-          <h3>Deadline : {Date(campaign.deadline)}</h3>
+          <h3>Deadline : {parsed_date.toString()}</h3>
           <h4>Current Status: {status}</h4>
           <div className="progress">
               <strong>{`Target: ${campaign.target}`}</strong>
