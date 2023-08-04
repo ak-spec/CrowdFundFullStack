@@ -17,16 +17,14 @@ const getData = async (id) => {
     try{
         const contractInstance = new ethers.Contract(CROWDFUND_CONTRACT_ADDRESS, CROWDFUND_ABI, provider)
         const campaign = await contractInstance.campaigns(id);
-        const date = new Date(ethers.toNumber(campaign.endTime) * 1000);
-        const options = { timeZone: 'Asia/Singapore', timeZoneName: 'short' }
-        const serialized_date = date.toLocaleString('en-SG', options);
+        const date = ethers.toNumber(campaign.endTime) * 1000;
         const decoded_campaign =  
           {
             id: ethers.toNumber(campaign.id),
             name: campaign.name,
             description: campaign.description,
             owner: campaign.owner,
-            deadline: serialized_date,
+            deadline: date,
             target: ethers.formatEther(campaign.targetAmt),
             currAmt: ethers.formatEther(campaign.currAmt),
             status: ethers.toNumber(campaign.status)
@@ -49,9 +47,10 @@ const Campaign = ({campaign}) => {
         setStatus(window.localStorage.getItem(campaign.id));
         return 
       }
-      const deadlineUnixTime = Date.parse(campaign.deadline) * 1000 * 60;
+      const deadlineUnixTime = campaign.deadline;
       const currDateTime = new Date();
-      if((currDateTime.getTime() * 1000 * 60 > deadlineUnixTime)){
+      const currTimeInmillisecs = currDateTime.getTime() ;
+      if(currTimeInmillisecs > deadlineUnixTime){
         setStatus("Expired");
         clearInterval(intervalId);
       }
@@ -78,7 +77,7 @@ const Campaign = ({campaign}) => {
           <p style={{fontFamily: 'sans-serif', marginTop: '60px'}}>Campaign launched by: {campaign.owner}</p>  
         </div>
         <div className='status-section'>
-          <h3>Deadline : {campaign.deadline}</h3>
+          <h3>Deadline : {Date(campaign.deadline)}</h3>
           <h4>Current Status: {status}</h4>
           <div className="progress">
               <strong>{`Target: ${campaign.target}`}</strong>
