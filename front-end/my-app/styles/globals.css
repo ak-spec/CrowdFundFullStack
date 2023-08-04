@@ -1,0 +1,157 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+body{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.hero {
+    padding: 70px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8)) , url('../public/images/tree.jpeg');
+    height: 80vh;
+}
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 2px;
+}
+
+.title-image {
+    display: flex;
+    margin-left: 30px;
+}
+
+.connection {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.connect_btn {
+    padding: 10px;
+    margin-right: 30px;
+    background-color: lightskyblue;
+}
+
+.formContainer {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 700px;
+    height: 500px;
+    align-items: center;
+    padding: 0px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+}
+
+textarea {
+    width: 100%;
+    padding: 20px;
+}
+
+.createBtn, .expired-btn, .delete {
+    padding: 10px 20px;
+    background-color: blueviolet;
+    font-weight: 1000;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 70%;
+    margin: 40px auto 0px auto;
+    row-gap: 50px;
+    column-gap: 60px;
+}
+
+.card {
+    width: 499px;
+    background-color: white;
+    box-shadow: 2px 2px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.campaign-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.status {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    padding: 5px, 7px;
+    background-color: white;
+    border-radius: 2px;
+    font-weight: bold;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.progress{
+    display: flex;
+    justify-content: space-around;
+}
+.fundForm {
+    margin-top: 60px;
+    width: 700px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+.Fund {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: green;
+    color: white;
+    width: 100px;
+}
+
+.Cancel {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    width: 100px;
+}
+
+.expired-btn, .delete, .refund{
+    margin-top: 40px;
+    margin-left: 300px;
+}
