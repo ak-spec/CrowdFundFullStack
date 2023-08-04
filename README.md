@@ -1,5 +1,5 @@
 # Getting Started
-- Clone the repo if you want to run from localhost 
+- Clone the repo if you want to run from local env
 - Navigate to each of the 2 folders and run 'npm install' to install all dependencies
 
 ## hardhat set-up:
