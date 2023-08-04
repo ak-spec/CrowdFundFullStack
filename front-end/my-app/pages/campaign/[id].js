@@ -18,7 +18,7 @@ const getData = async (id) => {
         const contractInstance = new ethers.Contract(CROWDFUND_CONTRACT_ADDRESS, CROWDFUND_ABI, provider)
         const campaign = await contractInstance.campaigns(id);
         const date = new Date(ethers.toNumber(campaign.endTime) * 1000);
-        const serialized_date = date.toUTCString();
+        const serialized_date = date.toLocaleString();
         const decoded_campaign =  
           {
             id: ethers.toNumber(campaign.id),
