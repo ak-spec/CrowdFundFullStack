@@ -2,7 +2,7 @@
 -Clone the repo 
 -run 'npm install' to install all dependencies in each of the 2 folders
 1. Add an .env file to both crowdFundHardhat and front-end/my-app folder
-###Things needed in the .env files : 
+### Things needed in the .env files : 
 * Alchemy API KEY 
 
 
@@ -30,6 +30,7 @@ click on this [link](https://medium.com/@kaishinaw/connecting-metamask-with-a-lo
 
 
 ## Sepolia set-up
+### Visit [deployed-app](https://crowd-fund-dapp-five.vercel.app/) or clone the repo and follow below steps to run from localhost:
 
 1. Navigate to front-end/my-app/context/constants.js and set the sepolia variable to true.
      command: cd front-end/my-app/context/constants.js
