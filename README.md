@@ -1,5 +1,5 @@
 # Getting Started
--Clone the repo 
+-Clone the repo if you want to run from localhost
 -run 'npm install' to install all dependencies in each of the 2 folders
 1. Add an .env file to crowdFundHardhat 
 ### Things needed in the .env files : 
