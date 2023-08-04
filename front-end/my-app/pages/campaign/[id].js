@@ -9,7 +9,8 @@ require('dotenv').config();
 const getData = async (id) => {
     let provider;
     if(process.env.ALCHEMY_API_KEY && CROWDFUND_CONTRACT_ADDRESS === "0x15663148Ae4f2b0b2f52C5Ef25f1ec6CC53Ed9E6"){
-      provider = new ethers.JsonRpcProvider("https://eth-sepolia.g.alchemy.com/v2/KQHIu6S27VTW8oInagzo4S2lDBj_vgnY");
+      const rpc_url = process.env.ALCHEMY_API_KEY
+      provider = new ethers.JsonRpcProvider(rpc_url);
     }else{
       provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545/");
     }
