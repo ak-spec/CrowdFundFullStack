@@ -8,21 +8,23 @@ click on this [link](https://medium.com/@kaishinaw/connecting-metamask-with-a-lo
 
 1. Navigate to crowdFundHardhat folder  
     command : cd crowdFundHardhat
-
-2. Start the hardhat local blockchain using this command: 
+   
+2. Comment out lines 15-18 in the hardhat config file.
+   
+3. Start the hardhat local blockchain using this command: 
     npx hardhat node
 
-3. Split the terminal and deploy the contract
+4. Split the terminal and deploy the contract
     command: npx hardhat run scripts/deploy.js --network localhost
 
-4. Open a new terminal and navigate to front-end/my-app/context/constants.js and set the sepolia variable to true. 
+5. Open a new terminal and navigate to front-end/my-app/context/constants.js and set the sepolia variable to true. 
      command: cd front-end/my-app/context/constants.js
      change line 7 -> sepolia = false
 
-5. Start the server    
+6. Start the server    
      command: npm run dev
 
-6. Enter the url(http://localhost:3000) shown in the browser to start interacting with the dapp 
+7. Enter the url(http://localhost:3000) shown in the browser to start interacting with the dapp 
 
 
 ## Sepolia set-up
