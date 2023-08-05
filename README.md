@@ -17,9 +17,9 @@ click on this [link](https://medium.com/@kaishinaw/connecting-metamask-with-a-lo
 4. Split the terminal and deploy the contract
     command: npx hardhat run scripts/deploy.js --network localhost
 
-5. Open a new terminal and navigate to front-end/my-app/context/constants.js and set the sepolia variable to true. 
-     command: cd front-end/my-app/context/constants.js
-     change line 7 -> sepolia = false
+5. Open a new terminal and navigate to front-end/my-app/context/constants.js and set the sepolia variable to true.     
+     - command: cd front-end/my-app/context/constants.js   
+     - change line 7 -> sepolia = false 
 
 6. Start the server    
      command: npm run dev
